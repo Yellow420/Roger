@@ -1034,7 +1034,8 @@ def diarize_audio(file_path):
     # Initialize the pre-trained pipeline for speaker diarization including overlapped speech
     pipeline = Pipeline.from_pretrained(
   "pyannote/speaker-diarization-3.1",
-  use_auth_token='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')
+# Add your Huggingface token here
+  use_auth_token='hf_')
 
     # Apply the pipeline to an audio file
     diarization = pipeline(file_path)
